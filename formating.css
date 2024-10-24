@@ -1,0 +1,82 @@
+
+
+
+
+
+
+body {
+  display: flex;
+  justify-content: center;         
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+  color: gold;
+  padding: 0%;
+  margin:0%;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.image{
+  display: flex;
+  justify-content: right;
+  background-image: url('hash.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:1000px;
+  height: 25vh;
+  border: 1px solid gold;
+  background-position: center;
+  
+}
+.netunim{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1000px;
+  height: 25vh;
+  border: 1px solid gold;
+  max-width: 1000px;
+}
+ .netunim div{
+  margin-left: 25px;
+ }
+
+  
+.simulazya, .regulazya{
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 25vh;
+  border: 1px solid gold;
+}
+p{
+  text-align: center;
+  padding: 35px;
+  font-size: 50px;
+}
+.logo{
+  margin-right: 330px;
+  margin-top: 40px;
+  font-size: 100px;
+}
+.radio-cont, .dmn{
+  margin-right:40px ;
+}
+.inp, .lblsel {
+  margin-right: 25px;
+}
+.lblf100{
+  text-align: center;
+  margin: 20px;
+  font-size: 25px;
+  color: green;
+}
+.lblf10{
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
