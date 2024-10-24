@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: right;
   background-image: url('hash.png');
-  background-size: 50%;
+  background-size: 40%;
   background-repeat: no-repeat;
   width:1000px;
   height: 25vh;
