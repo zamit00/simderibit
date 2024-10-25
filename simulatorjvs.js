@@ -153,8 +153,8 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
 
     document.getElementById('tbltozza').rows[1].cells[0].innerText='תקופה של ' + tkofabeshanim + ' שנים';
     
-
-
+    if(tkofabeshanim<10){
+    document.getElementById('tbltozza').rows[2].cells[0].innerText='תקופה של 10 שנים'
      sum1 = hishuv(x1,x2,ribitOzar,10);
      document.getElementById('tbltozza').rows[2].cells[1].innerText=parseInt(sum1);
     console.log(parseInt(sum1));
@@ -162,12 +162,20 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
      sum2=hishuv(x1,x2,0.06-dn/100,10);}
      else if(colu===2){
         sum2=hishuv(x1,x2,0.05-dn/100,10);}
+        
      else{
         sum2=hishuv(x1,x2,0.03-dn/100,10);
      } 
-    document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2);   
-    console.log(parseInt(sum2));
+     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2); 
+    console.log(parseInt(sum2));}
+    else{
+        document.getElementById('tbltozza').rows[2].cells[0].innerText='';
 
+    }
+
+
+    if(tkofabeshanim<20){
+    document.getElementById('tbltozza').rows[3].cells[0].innerText='תקופה של 20 שנים'
     sum1 = hishuv(x1,x2,ribitOzar,20);
     document.getElementById('tbltozza').rows[3].cells[1].innerText=parseInt(sum1);
     console.log(parseInt(sum1));
@@ -179,9 +187,16 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
            sum2=hishuv(x1,x2,0.04-dn/100,20);
         }
     document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2);    
-    console.log(parseInt(sum2));
+    console.log(parseInt(sum2));}
+    else{
+        document.getElementById('tbltozza').rows[3].cells[0].innerText='';
+
+    }
+    
+    
 
     sum1 = hishuv(x1,x2,ribitOzar,30);
+    document.getElementById('tbltozza').rows[4].cells[0].innerText='תקופה של 30 שנים'
     document.getElementById('tbltozza').rows[4].cells[1].innerText=parseInt(sum1);
     console.log(parseInt(sum1));
     if(colu===1){
@@ -268,103 +283,6 @@ function gotohome(){
     window.location.href = 'index.html';
    
 }
-
-
-function sumsum() {
-            
-    // Retrieve values from input fields
-    let x1 = parseInt(document.getElementsByName("txt1")[0].value);
-    let x2 = parseInt(document.getElementsByName("txt2")[0].value);
-    let dn = parseFloat(document.getElementsByName("dmeynihul")[0].value);
-    let ribitchoose=document.getElementById("selectribit");
-    let ribit=ribitchoose.value;
-    
-    let z=0.04-dn/100;
-
-    if(x1<0||x2<0){alert('סכומים לא תקינים');numbermakor0();return;}
-    let selectElement = document.getElementById("selecttkofa");
-    let x3 = selectElement.value; // Gets the selected value
-    
-   const textopen="סכום השקעה עתידי לתקופה של - ";
-   const textnext=" שנים:       ";
-   const shach = " ש\"ח"; 
-   
-   
-   if (document.getElementById("rd11").checked){z1=0.09-dn/100;}
-    if (document.getElementById("rd22").checked){z1=0.05-dn/100;}
-    if (document.getElementById("rd33").checked){z1=0.02-dn/100;}
-    if (document.getElementById("rd44").checked){z1=ribit-dn/100;}
-
-    
-   
-    
-   let sum=hishuv(x1,x2,z,x3);
-   
-    if (isNaN(sum) ) {alert('סכומים לא תקינים');numbermakor0();return;}
-        let integerPart=part(sum);
-       
-        document.getElementById("lblfirst0").textContent=textopen + x3 + textnext + integerPart + shach;
-        document.getElementById("lblfirst0").style.display = "block";
-
-        sum=hishuv(x1,x2,z1,x3);
-        integerPart=part(sum);
-   
-        document.getElementById("lblfirst00").textContent=textopen + x3 + textnext + integerPart + shach;
-        document.getElementById("lblfirst00").style.display = "block";
-  
-
-    if(x3<10){
-        document.getElementById("lblfirst10").style.display = "block";
-        document.getElementById("lblfirst100").style.display = "block";
-        sum=hishuv(x1,x2,z,10);
-        integerPart=part(sum);
-        document.getElementById("lblfirst10").textContent=textopen + "10" + textnext + integerPart + shach;
-        
-        sum=hishuv(x1,x2,z1,10);
-        integerPart=part(sum);
-        document.getElementById("lblfirst100").textContent=textopen + "10" + textnext + integerPart + shach;
-
-    }
-    else {document.getElementById("lblfirst10").style.display = "none";
-          document.getElementById("lblfirst100").style.display = "none";
-    }
-
-    if(x3<20){
-        document.getElementById("lblfirst20").style.display = "block";
-        document.getElementById("lblfirst200").style.display = "block";
-        sum=hishuv(x1,x2,z,20);
-        integerPart=part(sum);
-        document.getElementById("lblfirst20").textContent=textopen + "20" + textnext + integerPart + shach;
-        
-        sum=hishuv(x1,x2,z1,20);
-        integerPart=part(sum);
-        document.getElementById("lblfirst200").textContent=textopen + "20" + textnext + integerPart + shach;
-
-            }
-    else {document.getElementById("lblfirst20").style.display = "none";
-        document.getElementById("lblfirst200").style.display = "none";
-    }
-
-    if(x3<30){
-        document.getElementById("lblfirst30").style.display = "block";
-        document.getElementById("lblfirst300").style.display = "block";
-        sum=hishuv(x1,x2,z,30);
-        integerPart=part(sum);
-        document.getElementById("lblfirst30").textContent=textopen + "30" + textnext + integerPart + shach;
-        
-        sum=hishuv(x1,x2,z1,30);
-        integerPart=part(sum);
-        document.getElementById("lblfirst300").textContent=textopen + "30" + textnext + integerPart + shach;
-    
-    }
-    else {document.getElementById("lblfirst30").style.display = "none";
-        document.getElementById("lblfirst300").style.display = "none";
-    }
-
-
-}
-
-
 
 
 function part(partx){
