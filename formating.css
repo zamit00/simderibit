@@ -35,7 +35,6 @@ header{display: flex;
 table, tr,  td{
   border:1px solid gold;
   text-align: center ;
- font-size: 20px;
 }
 table{
   margin-top: 15px;}
@@ -90,7 +89,6 @@ header{display: flex;
 table, tr,  td{
   border:1px solid gold;
   text-align: center ;
- font-size: 25px;
 }
 table{
   margin-top: 15px;}
@@ -105,3 +103,9 @@ table{
   .tozaakot{font-size: 30px;color: green;font-weight: bold;margin: 35px 0px 20px 0px;}
 }
 .tbltozza{margin-top: 30px;}
+
+
+
+
+
+
