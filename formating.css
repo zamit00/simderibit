@@ -3,7 +3,7 @@
 @media (max-width: 768px){
  .main{width: 750px;} 
  header{font-size: 25px;} 
- .thbold, .thamuda{font-size: 20px;color: black;}
+ .thbold, .thamuda {font-size: 20px;color: black;}
  label{font-size: 15px;}
  .logo{margin-right:280px;}
  .tblkot{font-size: 20px;}
@@ -46,12 +46,13 @@ table{
   .dmn{margin-top: 10px;}
   input,select{width: 65px;height: 25px;
     text-align: center;font-size: 20px;}
+    .tozaakot{font-size: 20px;color: green;font-weight: bold;margin: 35px 0px 20px 0px;}
 }
 
 @media (min-width: 767px){
   .main{width: 850px;} 
   header{font-size: 50px;}
-  .thbold, .thamuda{font-size: 25px;color: black;}
+  .thbold, .thamuda {font-size: 25px;color: black;}
   .logo{margin-right:320px;}
   label{font-size: 30px;}
   .tblkot{font-size: 25px;}
@@ -99,10 +100,6 @@ table{
   .dmn{margin-top: 10px;}
   input,select{width: 80px;height: 30px;
   text-align: center;font-size: 25px;}
+  .tozaakot{font-size: 30px;color: green;font-weight: bold;margin: 35px 0px 20px 0px;}
 }
-
-
-
-
-
-
+.tbltozza{margin-top: 30px;}
