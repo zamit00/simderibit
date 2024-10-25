@@ -20,24 +20,26 @@
     <div class="netunim">
         
          <div class="radio-cont">
-                <input type="radio"  name="option" id="rd1" class="rd" checked onclick="toggleTextboxes(); sumsum()">
-                <label> הפקדה חד פעמית ובתשלומים </label>
+                <input type="radio"  name="option" id="rd1" class="rd" checked onclick="toggleTextboxes(); beforsumsum()">
+                <label>  הפקדה חד פעמית ובתשלומים חודשיים</label>
         </div>
         <div class="radio-cont">
-                <input type="radio" class="radiob" name="option" id="rd2" class="rd" onclick="toggleTextboxes(); sumsum()">
+                <input type="radio" class="radiob" name="option" id="rd2" class="rd" onclick="toggleTextboxes(); beforsumsum()">
                 <label>הפקדה חד פעמית</label>
-                <input type="number" name="txt1" id="tx1" value="1000" min="0" max="20000" step="500" class="inp" onchange="sumsum()">
+                <input type="number" name="txt1" id="tx1" value="1000" min="0" max="20000" step="500" class="inp" onchange="beforsumsum()">
         </div>
         <div class="radio-cont">
-                <input type="radio" class="radiob" name="option" id="rd3"  class="rd" onclick="toggleTextboxes(); sumsum()"> 
+                <input type="radio" class="radiob" name="option" id="rd3"  class="rd" onclick="toggleTextboxes(); beforsumsum()"> 
                 <label  >הפקדה בתשלומים</label>
-                <input type="number" name="txt2" id="tx2" value="200" min="0" max="2000" step="50" class="inp" onchange="sumsum()"> 
+                <input type="number" name="txt2" id="tx2" value="200" min="0" max="2000" step="50" class="inp" onchange="beforsumsum()"> 
         </div>
         <div class="dmn">
             <label  for="dmeynihul" class="lblinp"  >שיעור דמי ניהול
-                <input class="inp" type="number" name="dmeynihul" max="1" min="0.5" step="0.05" value="1" id="dmeynihul" onchange="sumsum()"> 
+                <input class="inp" type="number" name="dmeynihul" max="1" min="0.5" step="0.05" value="1" id="dmeynihul" onchange="beforsumsum()"> 
                 <label class="lblsel">תקופת השקעה
-                        <select id="selecttkofa" onchange="sumsum()" class="inp">
+                        <select id="selecttkofa"  class="inp" onchange="beforsumsum()">
+                            <option value="3">3</option>
+                            <option value="4">4</option>
                             <option value="5">5</option>
                             <option value="6">6</option>
                             <option value="7">7</option>
@@ -81,27 +83,27 @@
         </tr>
         <tr>
             <th class="thbold">עד 5 שנים</th>
-            <td onclick="highlightCell(this)" data-value='0.05'>5%</td>
-            <td onclick="highlightCell(this)"data-value='0.04'>4%</td>
-            <td onclick="highlightCell(this)" data-value='0.02' >2%</td>
+            <td onclick="highlightCell(this)" data-value="0.05">5%</td>
+            <td onclick="highlightCell(this)" data-value="0.04">4%</td>
+            <td onclick="highlightCell(this)"data-value="0.02">2%</td>
+        </tr> 
+        <tr>
+            <th class="thbold">5+ עד 10 שנים</th>
+            <td onclick="highlightCell(this)" data-value="0.06">6%</td>
+            <td onclick="highlightCell(this)" data-value="0.05">5%</td>
+            <td onclick="highlightCell(this)" data-value="0.03">3%</td>
         </tr>
         <tr>
-            <th class="thbold">5 עד 10 שנים</th>
-            <td onclick="highlightCell(this)" data-value='0.06' >6%</td>
-            <td onclick="highlightCell(this)" data-value='0.05' >5%</td>
-            <td onclick="highlightCell(this)" data-value='0.03' >3%</td>
-        </tr>
-        <tr>
-            <th class="thbold">10 עד 20 שנים</th>
-            <td onclick="highlightCell(this)" data-value='0.07' >7%</td>
-            <td onclick="highlightCell(this)" data-value='0.06' >6%</td>
-            <td onclick="highlightCell(this)" data-value='0.04' >4%</td>
+            <th class="thbold">10+ עד 20 שנים</th>
+            <td onclick="highlightCell(this)" data-value="0.07">7%</td>
+            <td onclick="highlightCell(this)" data-value="0.06">6%</td>
+            <td onclick="highlightCell(this)" data-value="0.04">4%</td>
         </tr>
         <tr>
             <th class="thbold">20 שנים ויותר</th>
-            <td onclick="highlightCell(this)" data-value='0.08' >8%</td>
-            <td onclick="highlightCell(this)" data-value='0.07' >7%</td>
-            <td onclick="highlightCell(this)" data-value='0.04' >4%</td>
+            <td onclick="highlightCell(this)" data-value="0.08">8%</td>
+            <td onclick="highlightCell(this)" data-value="0.07">7%</td>
+            <td onclick="highlightCell(this)" data-value="0.04">4%</td>
         </tr>
     </table>
 
@@ -111,11 +113,11 @@
         <tr>
             <th class="tblkot">ערך עתידי לתקופה</th>
             <th class="thamuda">ריבית רגולטורית 4%</th>
-            <th class="thamuda">ריבית שנבחרה בטבלה</th>
+            <th class="thamuda">ריביות לפי הטבלה</th>
             
         </tr>
         <tr>
-            <th class="thbold">תקופה של 5 שנים</th>
+            <th class="thbold"></th>
             <td></td>
             <td></td>
             
@@ -141,6 +143,10 @@
     </table>
 </div>
         
- 
+        
+
+        
+
+  
 </body>
 </html>
