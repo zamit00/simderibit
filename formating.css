@@ -83,7 +83,9 @@ p{
   height: 30px;
   font-size: 25px;
   text-align: center;
-  padding: 5px; }
+  padding: 5px;
+  margin-top: 10px;
+}
 
 #lblfirstr, #lblfirstrs{
   color: green;
