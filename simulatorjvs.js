@@ -10,7 +10,7 @@ function highlightCell(cell) {
 
     // Find the row and column index, adjusting for the header row and column
     const rowIndex = cell.parentElement.rowIndex - 1; // Subtract 1 for the header row
-    const columnIndex = cell.cellIndex - 1; // Subtract 1 for the header column
+    const columnIndex = cell.cellIndex; // Subtract 1 for the header column
 
     // Show an alert with the data-value, row, and column index
     alert(`Value: ${cell.getAttribute("data-value")}, Row: ${rowIndex}, Column: ${columnIndex}`);
