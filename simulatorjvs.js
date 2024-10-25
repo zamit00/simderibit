@@ -68,6 +68,22 @@ cells.forEach(cell => {
     if (cell.style.backgroundColor === 'green') {
         ribitchoose = cell.getAttribute("data-value");
         greenCellFound = true; // Set the flag to true if a green cell is found
+   
+    
+    const rowIndex = cell.parentElement.rowIndex ; // Subtract 1 for the header row
+    const columnIndex = cell.cellIndex; // Subtract 1 for the header column
+    let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
+    if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
+    || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
+        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); return;
+       
+    }
+    
+    
+    
+    
+    
+    
     }
 });
 
