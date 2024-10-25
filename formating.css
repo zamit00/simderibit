@@ -1,3 +1,70 @@
+
+
+@media (max-width: 768px){
+ .main{width: 750px;} 
+ header{font-size: 25px;} 
+ .thbold, .thamuda{font-size: 20px;color: black;}
+ label{font-size: 15px;}
+ .logo{margin-right:280px;}
+ .tblkot{font-size: 20px;}
+ th{
+  border:1px solid black;
+  text-align: center ;
+  background-color: gold;
+  color: black;
+}
+body {
+
+  display: flex;
+  justify-content: center;         
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+  color: gold;
+  padding: 0%;
+  margin:0%;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+}
+header{display: flex;
+  justify-content: right;
+}
+table, tr,  td{
+  border:1px solid gold;
+  text-align: center ;
+}
+table{
+  margin-top: 15px;}
+.thamuda{text-align: center;
+
+  }
+ 
+  .netunim{ margin-bottom:20px ;}
+  .dmn{margin-top: 10px;}
+}
+
+@media (min-width: 767px){
+  .main{width: 850px;} 
+  header{font-size: 50px;}
+  .thbold, .thamuda{font-size: 25px;color: black;}
+  .logo{margin-right:320px;}
+  label{font-size: 30px;}
+  .tblkot{font-size: 25px;}
+
+.tblkot{
+  background-color: black;
+  color: green;
+  font-weight: bold;
+}
+th{
+  border:1px solid black;
+  text-align: center ;
+  background-color: gold;
+  color: black;
+}
 body {
   display: flex;
   justify-content: center;         
@@ -25,34 +92,13 @@ table{
 .thamuda{text-align: center;
 
   }
-  th{
-    border:1px solid black;
-    text-align: center ;
-    background-color: gold;
-    color: black;
-  }
+ 
   .netunim{ margin-bottom:20px ;}
   .dmn{margin-top: 10px;}
-
-@media (max-width: 768px){
- .main{width: 750px;} 
- header{font-size: 25px;} 
- .thbold, .thamuda{font-size: 20px;color: black;}
- label{font-size: 15px;}
- .logo{margin-right:280px;}
- .tblkot{font-size: 20px;}
 }
 
-@media (min-width: 767px){
-  .main{width: 850px;} 
-  header{font-size: 50px;}
-  .thbold, .thamuda{font-size: 25px;color: black;}
-  .logo{margin-right:320px;}
-  label{font-size: 30px;}
-  .tblkot{font-size: 25px;}
-}
-.tblkot{
-  background-color: black;
-  color: green;
-  font-weight: bold;
-}
+
+
+
+
+
