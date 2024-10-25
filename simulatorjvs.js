@@ -79,6 +79,7 @@ cells.forEach(cell => {
         cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
+        document.getElementById('tbltozza').rows[1].cells[0].innerText='';
         document.getElementById('tbltozza').rows[1].cells[1].innerText='';
         document.getElementById('tbltozza').rows[2 ].cells[1].innerText='';
         document.getElementById('tbltozza').rows[3].cells[1].innerText='';
