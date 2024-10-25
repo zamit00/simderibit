@@ -1,13 +1,17 @@
 function highlightCell(cell) {
-    // מחזירים את כל התאים למצבם המקורי
+    // Reset all cells to original color
     const cells = document.querySelectorAll('#choosesikon td');
-    cells.forEach(cell=> {
-        c.style.backgroundColor = 'black'; // צבע רקע שחור
+    cells.forEach(cell => {
+        cell.style.backgroundColor = 'black';
     });
 
-    // משנים את צבע הרקע של התא שנלחץ
-    cell.style.backgroundColor = 'green'; // צבע רקע ירוק
-    alert(cell.getAttribute("data-value"));
-    
-    
+    // Highlight the clicked cell
+    cell.style.backgroundColor = 'green';
+
+    // Find the row and column index
+    const rowIndex = cell.parentElement.rowIndex; // Get the row index of the cell
+    const columnIndex = cell.cellIndex; // Get the column index of the cell
+
+    // Show an alert with the data-value, row, and column index
+    alert(`Value: ${cell.getAttribute("data-value")}, Row: ${rowIndex}, Column: ${columnIndex}`);
 }
