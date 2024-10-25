@@ -9,38 +9,34 @@
 
 </head>
 <body dir="rtl">
-    <div class="main">
-
-        
-           
-        
+    <div class="main">        
         <div class="nav">
             <p class="logo">Gמלי</p>
         </div>
 
-            <div class="image">
-                <p>מחשבון ריבית <br>דריבית</p>  
-            </div>
-            <div class="netunim">
-                <div class="radio-cont">
+        <div class="image">
+             <p>מחשבון ריבית <br>דריבית</p>  
+        </div>
+        <div class="netunim">
+             <div class="radio-cont">
                     <input type="radio"  name="option" id="rd1" class="rd" checked onclick="toggleTextboxes(); sumsum()">
                     <label  > הפקדה חד פעמית ובתשלומים 
                     </label>
-                </div>
-                <div class="radio-cont">
+            </div>
+            <div class="radio-cont">
                     <input type="radio" class="radiob" name="option" id="rd2" class="rd" onclick="toggleTextboxes(); sumsum()">
                     <label>הפקדה חד פעמית</label>
                     <input type="number" name="txt1" id="tx1" value="1000" min="0" max="20000" step="500" class="inp" onchange="sumsum()">
-                </div>
-                <div class="radio-cont">
+            </div>
+            <div class="radio-cont">
                     <input type="radio" class="radiob" name="option" id="rd3"  class="rd" onclick="toggleTextboxes(); sumsum()"> 
                     <label  >הפקדה בתשלומים</label>
                     <input type="number" name="txt2" id="tx2" value="200" min="0" max="2000" step="50" class="inp" onchange="sumsum()"> 
-                </div>
-                <div class="dmn">
-                    <label  for="dmeynihul" class="lblinp"  >שיעור דמי ניהול
-                        <input class="inp" type="number" name="dmeynihul" max="1" min="0.5" step="0.05" value="1" id="dmeynihul" onchange="sumsum()"> 
-                        <label class="lblsel">תקופת השקעה
+            </div>
+            <div class="dmn">
+                <label  for="dmeynihul" class="lblinp"  >שיעור דמי ניהול
+                    <input class="inp" type="number" name="dmeynihul" max="1" min="0.5" step="0.05" value="1" id="dmeynihul" onchange="sumsum()"> 
+                    <label class="lblsel">תקופת השקעה
                             <select id="selecttkofa" onchange="sumsum()" class="inp">
                                 <option value="5">5</option>
                                 <option value="6">6</option>
@@ -70,20 +66,20 @@
                                 <option value="30">30</option>
                             </select>
                                  
-                        </label>
+                     </label>
                           
-                    </label>
-                </div>
+                </label>
             </div>
-            </div>
-            <div class="regulazya">
+         </div>
+            
+        <div class="regulazya">
                 <label id="lblfirstr" class="lblf100">סכום השקעה עתידי - מחושב לפי ריבית של 4% שנתי</label><br>
                 <label id="lblfirst0" class="lblf10" >סכום השקעה עתידי לתקופה של</label>
                 <label id="lblfirst10" class="lblf10">סכום השקעה עתידי לתקופה של</label>
                 <label id="lblfirst20" class="lblf10">סכום השקעה עתידי לתקופה של</label>
                 <label id="lblfirst30" class="lblf10">סכום השקעה עתידי לתקופה של</label>
-            </div>
-            <div class="simulazya">
+        </div>
+         <div class="simulazya">
                 <label id="lblfirsts" class="lblf100">סכום השקעה עתידי - מחושב לפי סימולציית סיכון</label><br>
                 <label id="lblfirst00" class="lblf10">סכום השקעה עתידי לתקופה של</label>
                 <label id="lblfirst100" class="lblf10">סכום השקעה עתידי לתקופה של</label>
