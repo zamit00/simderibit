@@ -75,7 +75,19 @@ cells.forEach(cell => {
     let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
     if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
     || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
-        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); return;
+        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); 
+        cells.forEach(cell => {
+        cell.style.backgroundColor = 'black';
+    });
+        document.getElementById('tbltozza').rows[1].cells[1].innerText='';
+        document.getElementById('tbltozza').rows[2 ].cells[1].innerText='';
+        document.getElementById('tbltozza').rows[3].cells[1].innerText='';
+        document.getElementById('tbltozza').rows[4].cells[1].innerText='';
+        document.getElementById('tbltozza').rows[1].cells[2].innerText='';
+        document.getElementById('tbltozza').rows[2].cells[2].innerText='';
+        document.getElementById('tbltozza').rows[3].cells[2].innerText='';
+        document.getElementById('tbltozza').rows[4].cells[2].innerText='';
+        return;
        
     }
     
