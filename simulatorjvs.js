@@ -1,14 +1,14 @@
-window.onload = function() {
+/*window.onload = function() {
 
    
-    sumsum();}
+    sumsum();}*/
 
 function gotohome(){
     window.location.href = 'index.html';
    
 }
 
-
+/*
 function sumsum() {
             
     // Retrieve values from input fields
@@ -209,5 +209,5 @@ function gotomaslul() {
   // targetWindow.postMessage(message, 'https://zamit00.github.io/HZgemel/');}
    window.location.href = 'netunim.html';
    
-}
+}*/
 
