@@ -75,7 +75,7 @@ cells.forEach(cell => {
     let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
     if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
     || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
-        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); 
+        alert(' בצע בחירה מתאימה בטבלה'); 
         cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
