@@ -11,27 +11,28 @@ body {
 }
 
 @media (max-width: 768px){
-  .kot{font-size: 14px;}
-  .image, .netunim,.simulazya, .regulazya{width:600px;}
-  .img{ width: 25px;height: 25px; margin-right: 120px; margin-top: 15px;}
+  .kot{font-size: 20px;}
+  .image, .netunim,.simulazya, .regulazya{width:700px;}
+  .image{margin-left: 2px;}
+  .img{ width: 25px;height: 25px; margin-right: 160px; margin-top: 15px;}
   .netunim{padding: 2.5px 0px;}
   .p{font-size: 20px;margin-right: 20px;}
   .radio-cont, .dmn{margin-right:20px ;}
-  .logo{margin-right: 50px;font-size: 25px; margin-top: 8px;}
+  .logo{margin-right: 110px;font-size: 25px; margin-top: 8px;}
   .netunim div{margin-left: 15px;}
   .inp, .lblsel {margin-right: 14px;}
-  .inp, #selecttkofa{width: 40px;height: 15px;font-size: 12px;text-align: center;}
+  .inp, #selecttkofa{width: 40px;height: 15px;font-size: 16px;text-align: center;}
   .lblf100{
     text-align: center;
     margin-right: 20px;
     margin-bottom: 3px;
-    font-size: 14px;
+    font-size: 24px;
     color: green;
   }
   .lblf10{
     margin-right: 15px;
     margin-bottom: 3px;
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 
@@ -84,7 +85,7 @@ body {
 .netunim{
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  justify-content: center;
   height: 25vh;
   border: 1px solid gold;
   margin: 0px 0px;
