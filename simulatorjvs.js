@@ -1,15 +1,17 @@
-/*window.onload = function() {
+window.onload = function() {let x =x}
 
    
-    sumsum();}*/
+   /* sumsum(); */ 
+   
 
 function gotohome(){
     window.location.href = 'index.html';
    
 }
 
+
+function sumsum() {let y =y}
 /*
-function sumsum() {
             
     // Retrieve values from input fields
     let x1 = parseInt(document.getElementsByName("txt1")[0].value);
@@ -100,11 +102,11 @@ function sumsum() {
         document.getElementById("lblfirst300").style.display = "none";
     }
 
+*/
 
-}
 
-function toggleTextboxes() {
-const text1 = document.getElementById("tx1");
+function toggleTextboxes() {let x =x}
+/*const text1 = document.getElementById("tx1");
 const text2 = document.getElementById("tx2");
 
 if (document.getElementById("rd1").checked) {
@@ -125,49 +127,56 @@ text1.disabled = true;
 text2.disabled = false;
 numbermakor3();
 }
-}
-function numbermakor0(){document.getElementById("tx1").value=1000;document.getElementById("tx2").value=200;}
+*/
 
-function numbermakor1(){
+function numbermakor0(){let x =x}
+/*
+document.getElementById("tx1").value=1000;document.getElementById("tx2").value=200;}
+*/
+
+function numbermakor1(){let x =x}
+/*
 if(document.getElementById("tx1").value<0 || document.getElementById("tx1").value<0 ){alert('סכומים לא תקינים');numbermakor0();return;}
 
 if(document.getElementById("tx1").value==0){document.getElementById("tx1").value=1000;}
 if(document.getElementById("tx2").value==0){document.getElementById("tx2").value=200;}
 
-} 
+*/
 function numbermakor2(){
 if(document.getElementById("tx1").value<0 ){alert('סכום לא תקין');return;}
 if(document.getElementById("tx1").value==0){document.getElementById("tx1").value=1000;}
 document.getElementById("tx2").value=0;
 
 } 
-function numbermakor3(){
+function numbermakor3(){let x =x}
+/*
 if(document.getElementById("tx2").value<0 ){alert('סכום לא תקין');return;}
 if(document.getElementById("tx2").value==0){document.getElementById("tx2").value=200;}
 document.getElementById("tx1").value=0;
 
-} 
+*/
 
-function hishuv(x,y,z,t){
-    let hishuv = x + y;
+function hishuv(x,y,z,t){let x =x}
+/*    let hishuv = x + y;
     hishuv=hishuv * (1+z/12);
     for (let i = 1; i < t*12; i++) {
         hishuv = (hishuv+y) * (1+z/12);
     }
     //hishuv= part(hishuv)
     return hishuv;
-}
+*/
 
-function part(partx){
+function part(partx){let x =x}
+/*
     let part = partx.toString().split(".");
     let integerPart = part[0]; // "123"
     integerPart=integerPart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     part=integerPart;
     return part;
 
-}
-function gotosheelon(){
-   
+*/
+function gotosheelon(){let x =x}
+/*   
     localStorage.removeItem('savedMessage');
     document.getElementById("opn").style.display = "none";
     document.getElementById("cls").style.display = "block";
@@ -178,8 +187,9 @@ function gotosheelon(){
 
     iframe.contentWindow.postMessage('clearAnswers', '*');
     iframe.style.display = 'block';
-}
-function backfromsheelon(){
+*/
+function backfromsheelon(){let x =x}
+/*
     let touser="";
     document.getElementById("opn").style.display = "block";
     document.getElementById("cls").style.display = "none";
@@ -200,9 +210,9 @@ function backfromsheelon(){
     localStorage.removeItem('savedMessage');
     return;
        
-}
-function gotomaslul() {
-    
+*/
+function gotomaslul() {let x =x}
+/*    
    //const targetWindow = window.open('https://zamit00.github.io/HZgemel/', '_blank');
    //const message = document.getElementById("sikonnimdad").innerText;
    //if (message !== ''){
