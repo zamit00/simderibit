@@ -8,6 +8,7 @@ body {
   color: gold;
   padding: 0%;
   margin:0%;
+  font-size:25px;
 }
 
 .main{
@@ -46,7 +47,7 @@ body {
   height: 20vh;
   border: 1px solid gold;
   max-width: 1000px;
-  font-size:25px;
+  
   
 }
  .netunim div{
@@ -77,6 +78,11 @@ p{
 .inp, .lblsel {
   margin-right: 25px;
 }
+.inp{
+  width: 150px;
+  height: 40px;
+
+
 .lblf100{
   text-align: center;
   margin: 20px;
