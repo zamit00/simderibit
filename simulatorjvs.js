@@ -276,19 +276,19 @@ function toggleTextboxes() {
     function numbermakor1(){
     if(document.getElementById("tx1").value<0 || document.getElementById("tx1").value<0 ){alert('סכומים לא תקינים');numbermakor0();return;}
     
-    if(document.getElementById("tx1").value==0){document.getElementById("tx1").value=1000;}
-    if(document.getElementById("tx2").value==0){document.getElementById("tx2").value=200;}
+    document.getElementById("tx1").value=1000;
+    document.getElementById("tx2").value=200;
     
     } 
     function numbermakor2(){
     if(document.getElementById("tx1").value<0 ){alert('סכום לא תקין');return;}
-    if(document.getElementById("tx1").value==0){document.getElementById("tx1").value=1000;}
+    document.getElementById("tx1").value=1000;
     document.getElementById("tx2").value=0;
     
     } 
     function numbermakor3(){
     if(document.getElementById("tx2").value<0 ){alert('סכום לא תקין');return;}
-    if(document.getElementById("tx2").value==0){document.getElementById("tx2").value=200;}
+    document.getElementById("tx2").value=200;
     document.getElementById("tx1").value=0;
     
     } 
