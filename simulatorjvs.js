@@ -66,25 +66,7 @@ function beforesumsum(){
     const cells = document.querySelectorAll('#choosesikon td');
     let greenCellFound = false; // Flag to track if any green cell is found
 
-   /* if(tkofabeshanim<6){
-        document.getElementById("choosesikon").rows[1].cells[0].style.backgroundColor='green';
-    }
-    else if(tkofabeshanim<11){
-        document.getElementById("choosesikon").rows[2].cells[0].style.backgroundColor='green';
-  
-    }
-    else if(tkofabeshanim<21){
-       document.getElementById("choosesikon").rows[3].cells[0].style.backgroundColor='green';
    
-    }
-    else if(tkofabeshanim>20){
-        document.getElementById("choosesikon").rows[4].cells[0].style.backgroundColor='green';
-  
-    }
-    else{
-    tkofabeshanim = tkofabeshanim;
-    }
-*/
     
     cells.forEach(cell => {
     if (cell.style.backgroundColor === 'green') {
@@ -170,6 +152,7 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
 }
 }
 
+
 function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){ 
     let ribit;
     ribitOzar=(ribitOzar-dn/100);
@@ -193,9 +176,9 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
      document.getElementById('tbltozza').rows[2].cells[1].innerText=parseInt(sum1).toLocaleString();
     
     if(colu===1){
-     ribit=0.06;   
+     ribit=0.06; }  
      else if(colu===2){
-    ribit=0.05; 
+    ribit=0.05;} 
      else{
         ribit=0.03;
        
@@ -225,7 +208,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
           ribit=0.04;
         }
      sum2=hishuv(x1,x2,ribit-dn/100,20);
-     document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " ribit*100 + "%"; 
+     document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + ribit*100 + "%"; 
    
     }
     else{
@@ -240,14 +223,14 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     document.getElementById('tbltozza').rows[4].cells[1].innerText=parseInt(sum1).toLocaleString();
     
     if(colu===1){
-       ribit=0.08;
+       ribit=0.08;}
         else if(colu===2){
-       ribit=0.07;
+       ribit=0.07;}
         else{
         ribit=0.04;
         }
     sum2=hishuv(x1,x2,ribit-dn/100,10);
-    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " ribit*100 + "%";    
+    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + ribit*100 + "%";    
     document.getElementById('hadpeami').innerText= '';
     document.getElementById('hodshi').innerText='';
     document.getElementById('shanim').innerText= '';
@@ -340,71 +323,3 @@ function toggleTextboxes() {
 
 
 
-
-/*
-
-
-window.onload = function() {
-
-   
-    sumsum();}
-
-function gotohome(){
-    window.location.href = 'index.html';
-   
-}
-
-
-function part(partx){
-    let part = partx.toString().split(".");
-    let integerPart = part[0]; // "123"
-    integerPart=integerPart.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    part=integerPart;
-    return part;
-
-}
-function gotosheelon(){
-   
-    localStorage.removeItem('savedMessage');
-    document.getElementById("opn").style.display = "none";
-    document.getElementById("cls").style.display = "block";
-    document.getElementById("alltozaa").style.display = "none";
-    document.getElementById("iframe").style.display = "block";
-
-    const iframe = document.getElementById('myIframe');
-
-    iframe.contentWindow.postMessage('clearAnswers', '*');
-    iframe.style.display = 'block';
-}
-function backfromsheelon(){
-    let touser="";
-    document.getElementById("opn").style.display = "block";
-    document.getElementById("cls").style.display = "none";
-    document.getElementById("iframe").style.display = "none";
-    document.getElementById("alltozaa").style.display = "block";
-    document.getElementById("sikonnimdad").style.display = "none";
-    const savedMessage = localStorage.getItem('savedMessage');
-    if (savedMessage) {touser=savedMessage;
-         document.getElementById("sikonnimdad").style.height="110px";
-        document.getElementById("sikonnimdad").innerText='סיכון ' + touser;
-    } else {
-       document.getElementById("sikonnimdad").style.height="110px";
-        touser="לא בוצע שאלון";
-        document.getElementById("sikonnimdad").innerText=touser;
-    }
-    
-    document.getElementById("sikonnimdad").style.display = "block";
-    localStorage.removeItem('savedMessage');
-    return;
-       
-}
-function gotomaslul() {
-    
-   //const targetWindow = window.open('https://zamit00.github.io/HZgemel/', '_blank');
-   //const message = document.getElementById("sikonnimdad").innerText;
-   //if (message !== ''){
-  // targetWindow.postMessage(message, 'https://zamit00.github.io/HZgemel/');}
-   window.location.href = 'netunim.html';
-   
-}
-   */
