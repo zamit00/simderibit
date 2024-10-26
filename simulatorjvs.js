@@ -82,6 +82,8 @@ function beforesumsum(){
         cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
+
+        
         document.getElementById('tbltozza').rows[1].cells[0].innerText='';
         document.getElementById('tbltozza').rows[1].cells[1].innerText='';
         document.getElementById('tbltozza').rows[2 ].cells[1].innerText='';
@@ -111,7 +113,19 @@ if (!greenCellFound) {
     return;
 }
 else{
-    
+
+
+ cells.forEach(cell => {
+     const cellrow=cell.parentElement.rowIndex;
+         
+     if(cellrow===rowIndex){
+     document.getElementById('choosesikon').rows[cellrow].cells[0].style.backgroundColor='green';
+         }  
+     }
+     else{
+          document.getElementById('choosesikon').rows[cellrow].cells[0].style.backgroundColor='black';
+     }
+    });   
 
 
     //if(isNaN(ribitchoose)){alert("");return;}//
