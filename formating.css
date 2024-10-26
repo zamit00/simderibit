@@ -108,13 +108,16 @@ table{
 .thbold{text-align: right; padding-right: 5px;}
 
 .image {
- width: 400px;
- height: 400px;
+  width: 400px;
+  height: 400px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-image: url('hash.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom center;
-  background-attachment: fixed;
+  background-position: center;
 }
 
 
