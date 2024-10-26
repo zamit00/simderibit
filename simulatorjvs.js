@@ -45,18 +45,11 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
 
 
 //console.log(x1, x2, dn, ribitchoose, ribitOzar);//
-if (document.getElementById("rd1").checked){
-    x1 = parseInt(document.getElementsByName("txt1")[0].value);
-    x2 = parseInt(document.getElementsByName("txt2")[0].value);
-}
-else if (document.getElementById("rd2").checked){
-  x1 = parseInt(document.getElementsByName("txt1")[0].value);  
-    x2=0;}
-else{x1=0;
- x2 = parseInt(document.getElementsByName("txt2")[0].value); 
-    }
+if (document.getElementById("rd1").checked){x1=x1;x2=x2;}
+else if (document.getElementById("rd2").checked){x1=x1;x2=0;}
+else{x1=0;x2=x2;}
 
-sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex)
+sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex,rowIndex)
 
 
 
@@ -67,29 +60,30 @@ sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex)
     
 }
 
-function beforsumsum(){
-const cells = document.querySelectorAll('#choosesikon td');
-let greenCellFound = false; // Flag to track if any green cell is found
-cells.forEach(cell => {
+function beforesumsum(){
+    let columnIndex;
+    let rowIndex;
+    const cells = document.querySelectorAll('#choosesikon td');
+    let greenCellFound = false; // Flag to track if any green cell is found
+
+    cells.forEach(cell => {
     if (cell.style.backgroundColor === 'green') {
         ribitchoose = cell.getAttribute("data-value");
         greenCellFound = true; // Set the flag to true if a green cell is found
-   
     
-        const rowIndex = cell.parentElement.rowIndex ; // Subtract 1 for the header row
-        const columnIndex = cell.cellIndex; // Subtract 1 for the header column
-        let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
-          if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
-              || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
-        alert(' בצע בחירה מתאימה בטבלה'); 
+     rowIndex = cell.parentElement.rowIndex ; // Subtract 1 for the header row
+     columnIndex = cell.cellIndex; // Subtract 1 for the header column
+    let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
+    console.log(columnIndex);
+
+    if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
+    || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
+        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); 
         cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
         document.getElementById('tbltozza').rows[1].cells[0].innerText='';
         document.getElementById('tbltozza').rows[1].cells[1].innerText='';
-        document.getElementById('tbltozza').rows[2].cells[0].innerText='';
-        document.getElementById('tbltozza').rows[3].cells[0].innerText='';
-        document.getElementById('tbltozza').rows[4].cells[0].innerText='';
         document.getElementById('tbltozza').rows[2 ].cells[1].innerText='';
         document.getElementById('tbltozza').rows[3].cells[1].innerText='';
         document.getElementById('tbltozza').rows[4].cells[1].innerText='';
@@ -97,7 +91,6 @@ cells.forEach(cell => {
         document.getElementById('tbltozza').rows[2].cells[2].innerText='';
         document.getElementById('tbltozza').rows[3].cells[2].innerText='';
         document.getElementById('tbltozza').rows[4].cells[2].innerText='';
-    
         return;
        
     }
@@ -116,7 +109,7 @@ if (!greenCellFound) {
 }
 else{
     
-alert('ok1');
+
 
     //if(isNaN(ribitchoose)){alert("");return;}//
     let x1 = parseInt(document.getElementsByName("txt1")[0].value);
@@ -140,44 +133,34 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
    
     let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
     let ribitOzar = 0.04;
-    if (document.getElementById("rd1").checked){
-        x1 = parseInt(document.getElementsByName("txt1")[0].value);
-        x2 = parseInt(document.getElementsByName("txt2")[0].value);
-    }
-    else if (document.getElementById("rd2").checked){
-     x1 = parseInt(document.getElementsByName("txt1")[0].value);   
-        x2=0;}
-    else{x1=0;
-     x2 = parseInt(document.getElementsByName("txt2")[0].value);   
-        }
-    alert('ok2');
-    alert(x1,x2);
-    sumsum(x1, x2, dn, ribitchoose, ribitOzar,columnIndex);
+    if (document.getElementById("rd1").checked){x1=x1;x2=x2;}
+    else if (document.getElementById("rd2").checked){x1=x1;x2=0;}
+    else{x1=0;x2=x2;}
+
+    sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex,rowIndex);
 
 
 }
 }
 
-function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){ 
+function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){ 
 
     ribitOzar=(ribitOzar-dn/100);
     ribitchoose=(ribitchoose-dn/100);
     let sum1 = hishuv(x1,x2,ribitOzar,tkofabeshanim);
-     
     document.getElementById('tbltozza').rows[1].cells[1].innerText=parseInt(sum1).toLocaleString();
-    console.log(parseInt(sum1));
+   
     let sum2=hishuv(x1,x2,ribitchoose,tkofabeshanim);
-    
     document.getElementById('tbltozza').rows[1].cells[2].innerText=parseInt(sum2).toLocaleString();
-   console.log(parseInt(sum2));
+    
 
     document.getElementById('tbltozza').rows[1].cells[0].innerText='תקופה של ' + tkofabeshanim + ' שנים';
     
     if(tkofabeshanim<10){
     document.getElementById('tbltozza').rows[2].cells[0].innerText='תקופה של 10 שנים'
      sum1 = hishuv(x1,x2,ribitOzar,10);
-    document.getElementById('tbltozza').rows[2].cells[1].innerText=parseInt(sum1).toLocaleString();
-    console.log(parseInt(sum1));
+     document.getElementById('tbltozza').rows[2].cells[1].innerText=parseInt(sum1).toLocaleString();
+    
     if(colu===1){
      sum2=hishuv(x1,x2,0.06-dn/100,10);}
      else if(colu===2){
@@ -186,9 +169,8 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
      else{
         sum2=hishuv(x1,x2,0.03-dn/100,10);
      } 
-
-    document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString();
-    console.log(parseInt(sum2));}
+     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString(); 
+    }
     else{
         document.getElementById('tbltozza').rows[2].cells[0].innerText='';
 
@@ -198,9 +180,8 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
     if(tkofabeshanim<20){
     document.getElementById('tbltozza').rows[3].cells[0].innerText='תקופה של 20 שנים'
     sum1 = hishuv(x1,x2,ribitOzar,20);
-    
     document.getElementById('tbltozza').rows[3].cells[1].innerText=parseInt(sum1).toLocaleString();
-    console.log(parseInt(sum1));
+   
     if(colu===1){
         sum2=hishuv(x1,x2,0.07-dn/100,20);}
         else if(colu===2){
@@ -208,9 +189,8 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
         else{
            sum2=hishuv(x1,x2,0.04-dn/100,20);
         }
-    
-    document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2).toLocaleString();
-  console.log(parseInt(sum2));}
+    document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2).toLocaleString();    
+    }
     else{
         document.getElementById('tbltozza').rows[3].cells[0].innerText='';
 
@@ -220,10 +200,8 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
 
     sum1 = hishuv(x1,x2,ribitOzar,30);
     document.getElementById('tbltozza').rows[4].cells[0].innerText='תקופה של 30 שנים'
-    
     document.getElementById('tbltozza').rows[4].cells[1].innerText=parseInt(sum1).toLocaleString();
-
-    console.log(parseInt(sum1));
+    
     if(colu===1){
         sum2=hishuv(x1,x2,0.08-dn/100,30);}
         else if(colu===2){
@@ -231,9 +209,28 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
         else{
            sum2=hishuv(x1,x2,0.04-dn/100,30);
         }
+    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString();    
+   
+    if(x1===0) {
+        document.getElementById('tblnetunylakuach').rows[0].cells[1].innerText='ללא';
+    }
+    else{
+        document.getElementById('tblnetunylakuach').rows[0].cells[1].innerText=x1.toLocaleString();  
+    } 
+    if(x2===0) {
+        document.getElementById('tblnetunylakuach').rows[0].cells[3].innerText='ללא';
+    }
+    else{
+        document.getElementById('tblnetunylakuach').rows[0].cells[3].innerText=x2.toLocaleString();  
+    }  
     
-    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString();
- console.log(parseInt(sum2));
+    document.getElementById('tblnetunylakuach').rows[1].cells[1].innerText=tkofabeshanim;
+    document.getElementById('tblnetunylakuach').rows[1].cells[3].innerText=dn+'%';
+    document.getElementById('tblnetunylakuach').rows[2].cells[3].innerText=document.getElementById('choosesikon').rows[rowIndex].cells[0].innerText
+    document.getElementById('tblnetunylakuach').rows[2].cells[1].innerText=document.getElementById('choosesikon').rows[0].cells[colu].innerText
+
+
+    
 
 
 
@@ -276,19 +273,19 @@ function toggleTextboxes() {
     function numbermakor1(){
     if(document.getElementById("tx1").value<0 || document.getElementById("tx1").value<0 ){alert('סכומים לא תקינים');numbermakor0();return;}
     
-    document.getElementById("tx1").value=1000;
-    document.getElementById("tx2").value=200;
+    if(document.getElementById("tx1").value==0){document.getElementById("tx1").value=1000;}
+    if(document.getElementById("tx2").value==0){document.getElementById("tx2").value=200;}
     
     } 
     function numbermakor2(){
     if(document.getElementById("tx1").value<0 ){alert('סכום לא תקין');return;}
-    document.getElementById("tx1").value=1000;
+    if(document.getElementById("tx1").value==0){document.getElementById("tx1").value=1000;}
     document.getElementById("tx2").value=0;
     
     } 
     function numbermakor3(){
     if(document.getElementById("tx2").value<0 ){alert('סכום לא תקין');return;}
-    document.getElementById("tx2").value=200;
+    if(document.getElementById("tx2").value==0){document.getElementById("tx2").value=200;}
     document.getElementById("tx1").value=0;
     
     } 
