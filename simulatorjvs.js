@@ -171,7 +171,7 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
 }
 
 function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){ 
-
+    let ribit;
     ribitOzar=(ribitOzar-dn/100);
     ribitchoose=(ribitchoose-dn/100);
     let sum1 = hishuv(x1,x2,ribitOzar,tkofabeshanim);
@@ -191,15 +191,15 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
      document.getElementById('tbltozza').rows[2].cells[1].innerText=parseInt(sum1).toLocaleString();
     
     if(colu===1){
-    
-     sum2=hishuv(x1,x2,0.06-dn/100,10);}
+     ribit=0.06;   
      else if(colu===2){
-        sum2=hishuv(x1,x2,0.05-dn/100,10);}
-        
+    ribit=0.05; 
      else{
-        sum2=hishuv(x1,x2,0.03-dn/100,10);
+        ribit=0.03;
+       
      } 
-     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString(); 
+     sum2=hishuv(x1,x2,ribit-dn/100,10);
+     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + ribit; 
     }
     else{
         document.getElementById('tbltozza').rows[2].cells[0].innerText='';
@@ -216,13 +216,15 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     document.getElementById('tbltozza').rows[3].cells[1].innerText=parseInt(sum1).toLocaleString();
    
     if(colu===1){
-        sum2=hishuv(x1,x2,0.07-dn/100,20);}
+        ribit=0.07;}
         else if(colu===2){
-           sum2=hishuv(x1,x2,0.06-dn/100,20);}
+          ribit=0.06;}
         else{
-           sum2=hishuv(x1,x2,0.04-dn/100,20);
+          ribit=0.04;
         }
-    document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2).toLocaleString();    
+     sum2=hishuv(x1,x2,ribit-dn/100,20);
+     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + ribit; 
+   
     }
     else{
         document.getElementById('tbltozza').rows[3].cells[0].innerText='';
@@ -236,13 +238,14 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     document.getElementById('tbltozza').rows[4].cells[1].innerText=parseInt(sum1).toLocaleString();
     
     if(colu===1){
-        sum2=hishuv(x1,x2,0.08-dn/100,30);}
+       ribit=0.08;
         else if(colu===2){
-           sum2=hishuv(x1,x2,0.07-dn/100,30);}
+       ribit=0.07;
         else{
-           sum2=hishuv(x1,x2,0.04-dn/100,30);
+        ribit=0.04;
         }
-    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString();    
+    sum2=hishuv(x1,x2,ribit-dn/100,10);
+    document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + ribit;    
     document.getElementById('hadpeami').innerText= '';
     document.getElementById('hodshi').innerText='';
     document.getElementById('shanim').innerText= '';
