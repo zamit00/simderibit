@@ -81,6 +81,9 @@ cells.forEach(cell => {
     });
         document.getElementById('tbltozza').rows[1].cells[0].innerText='';
         document.getElementById('tbltozza').rows[1].cells[1].innerText='';
+        document.getElementById('tbltozza').rows[2].cells[0].innerText='';
+        document.getElementById('tbltozza').rows[3].cells[0].innerText='';
+        document.getElementById('tbltozza').rows[4].cells[0].innerText='';
         document.getElementById('tbltozza').rows[2 ].cells[1].innerText='';
         document.getElementById('tbltozza').rows[3].cells[1].innerText='';
         document.getElementById('tbltozza').rows[4].cells[1].innerText='';
