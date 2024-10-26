@@ -66,7 +66,7 @@ function beforesumsum(){
     const cells = document.querySelectorAll('#choosesikon td');
     let greenCellFound = false; // Flag to track if any green cell is found
 
-    if(tkofabeshanim<6){
+   /* if(tkofabeshanim<6){
         document.getElementById("choosesikon").rows[1].cells[0].style.backgroundColor='green';
     }
     else if(tkofabeshanim<11){
@@ -84,7 +84,7 @@ function beforesumsum(){
     else{
     tkofabeshanim = tkofabeshanim;
     }
-
+*/
     
     cells.forEach(cell => {
     if (cell.style.backgroundColor === 'green') {
