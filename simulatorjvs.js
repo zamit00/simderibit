@@ -161,7 +161,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     document.getElementById('tbltozza').rows[1].cells[1].innerText=parseInt(sum1).toLocaleString();
    
     let sum2=hishuv(x1,x2,ribitchoose,tkofabeshanim);
-    document.getElementById('tbltozza').rows[1].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + parseInt(ribit*100).toLocaleString() + "%"; 
+    document.getElementById('tbltozza').rows[1].cells[2].innerText=parseInt(sum2).toLocaleString() ; 
     document.getElementById('tbltozza').rows[1].cells[2].innerText=parseInt(sum2).toLocaleString();
     
 
@@ -183,7 +183,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
        
      } 
      sum2=hishuv(x1,x2,ribit-dn/100,10);
-     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + parseInt(ribit*100).toLocaleString() + "%"; 
+     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2).toLocaleString() ; 
     }
     else{
         document.getElementById('tbltozza').rows[2].cells[0].innerText='';
@@ -207,7 +207,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
           ribit=0.04;
         }
      sum2=hishuv(x1,x2,ribit-dn/100,20);
-     document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " +parseInt(ribit*100).toLocaleString() + "%"; 
+     document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2).toLocaleString(); 
    
     }
     else{
@@ -229,7 +229,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
         ribit=0.04;
         }
     sum2=hishuv(x1,x2,ribit-dn/100,10);
-    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString() + " לפי ריבית: " + ribit*100 + "%";    
+    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString() ;    
     document.getElementById('hadpeami').innerText= '';
     document.getElementById('hodshi').innerText='';
     document.getElementById('shanim').innerText= '';
