@@ -115,17 +115,7 @@ if (!greenCellFound) {
 else{
 
 
- cells.forEach(cell => {
-     const cellrow=cell.parentElement.rowIndex;
-         
-     if(cellrow===rowIndex){
-     document.getElementById('choosesikon').rows[cellrow].cells[0].style.backgroundColor='green';
-         }  
-     }
-     else{
-          document.getElementById('choosesikon').rows[cellrow].cells[0].style.backgroundColor='black';
-     }
-    });   
+ 
 
 
     //if(isNaN(ribitchoose)){alert("");return;}//
