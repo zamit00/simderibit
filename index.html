@@ -20,24 +20,24 @@
     <div class="netunim">
         
          <div class="radio-cont">
-                <input type="radio"  name="option" id="rd1" class="rd" checked onclick="toggleTextboxes(); beforsumsum()">
+                <input type="radio"  name="option" id="rd1" class="rd" checked onclick="toggleTextboxes(); beforesumsum()">
                 <label>  הפקדה חד פעמית ובתשלומים חודשיים</label>
         </div>
         <div class="radio-cont">
-                <input type="radio" class="radiob" name="option" id="rd2" class="rd" onclick="toggleTextboxes(); beforsumsum()">
+                <input type="radio" class="radiob" name="option" id="rd2" class="rd" onclick="toggleTextboxes(); beforesumsum()">
                 <label>הפקדה חד פעמית</label>
-                <input type="number" name="txt1" id="tx1" value="1000" min="0" max="20000" step="500" class="inp" onchange="beforsumsum()">
+                <input type="number" name="txt1" id="tx1" value="1000" min="0" max="20000" step="500" class="inp" onchange="beforesumsum()">
         </div>
         <div class="radio-cont">
-                <input type="radio" class="radiob" name="option" id="rd3"  class="rd" onclick="toggleTextboxes(); beforsumsum()"> 
+                <input type="radio" class="radiob" name="option" id="rd3"  class="rd" onclick="toggleTextboxes(); beforesumsum()"> 
                 <label  >הפקדה בתשלומים</label>
-                <input type="number" name="txt2" id="tx2" value="200" min="0" max="2000" step="50" class="inp" onchange="beforsumsum()"> 
+                <input type="number" name="txt2" id="tx2" value="200" min="0" max="2000" step="50" class="inp" onchange="beforesumsum()"> 
         </div>
         <div class="dmn">
             <label  for="dmeynihul" class="lblinp"  >שיעור דמי ניהול
-                <input class="inp" type="number" name="dmeynihul" max="1" min="0.5" step="0.05" value="1" id="dmeynihul" onchange="beforsumsum()"> 
+                <input class="inp" type="number" name="dmeynihul" max="1" min="0.5" step="0.05" value="1" id="dmeynihul" onchange="beforesumsum()"> 
                 <label class="lblsel">תקופת השקעה
-                        <select id="selecttkofa"  class="inp" onchange="beforsumsum()">
+                        <select id="selecttkofa"  class="inp" onchange="beforesumsum()">
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
@@ -107,8 +107,33 @@
         </tr>
     </table>
 
-
+    
     <p class="tozaakot"> ערך עתידי בהתאם לנתוני ההשקעה:</p>
+
+    <div class="netunylakuach" id="netunylakuach">
+        <table name="tblnetunylakuach" id="tblnetunylakuach" class="tbltozza">
+            <tr>
+                <th class="thbold">הפקדה חד פעמית</th>
+                <td class="tdemza"></td> 
+                <th class="thbold">הפקדה חודשית</th>
+                <td class="tdemza"></td>    
+            </tr>
+            
+            <tr>
+                <th class="thbold">תקופת השקעה בשנים</th>
+                <td class="tdemza"></td> 
+                <th class="thbold">שיעור דמי ניהול</th>
+                <td class="tdemza"></td>               
+            </tr>
+            
+            <tr>
+                <th class="thbold">סיכון לסימולציה</th>
+                <td class="tdemza"></td> 
+                <th class="thbold">טווח תקופה לסימולציה</th>
+                <td class="tdemza"></td>                
+            </tr>
+        </table>   
+    </div>
     <table name="tbltozza" id="tbltozza" class="tbltozza">
         <tr>
             <th class="tblkot">ערך עתידי לתקופה</th>
@@ -117,30 +142,36 @@
             
         </tr>
         <tr>
-            <th class="thbold" ></th>
+            <th class="thbold"></th>
             <td></td>
             <td></td>
             
         </tr>
         <tr>
-            <th class="thbold"></th></th>
+            <th class="thbold"></th>
             <td></td>
             <td></td>
             
         </tr>
         <tr>
-            <th class="thbold" ></th>
+            <th class="thbold"></th>
             <td></td>
-            <td></td>
+            <td ></td>
             
         </tr>
         <tr>
-            <th class="thbold" ></th>
-            <td></td>
+            <th class="thbold"></th>
+            <td ></td>
             <td></td>
             
         </tr>
     </table>
 </div>
+        
+        
+
+        
+
+  
 </body>
 </html>
