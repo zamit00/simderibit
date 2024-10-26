@@ -106,7 +106,9 @@ table{
 .tbltozza, .tblnetunylakuach{margin-top: 15px;display: none;}
 
 .tdemza{width: 175px;}
-.thbold{text-align: right; padding-right: 5px;}
+.thbold{text-align: right;
+        padding-right: 5px;
+       max-width: 260px;}
 
 
 
