@@ -228,7 +228,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
         else{
         ribit=0.04;
         }
-    sum2=hishuv(x1,x2,ribit-dn/100,10);
+    sum2=hishuv(x1,x2,ribit-dn/100,30);
     document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString() ;    
     document.getElementById('hadpeami').innerText= '';
     document.getElementById('hodshi').innerText='';
