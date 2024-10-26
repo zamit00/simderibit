@@ -47,7 +47,6 @@ table{
   input,select{width: 65px;height: 25px;
     text-align: center;font-size: 20px;}
     .tozaakot{font-size: 20px;color: green;font-weight: bold;margin: 35px 0px 20px 0px;}
-
 }
 
 @media (min-width: 767px){
@@ -101,14 +100,12 @@ table{
   .dmn{margin-top: 10px;}
   input,select{width: 80px;height: 30px;
   text-align: center;font-size: 25px;}
-  .tozaakot{font-size: 30px;color: green;font-weight: bold;margin: 35px 0px 20px 0px;}
-
+  .tozaakot{font-size: 30px;color: green;font-weight: bold;margin: 35px 0px 5px 0px;}
 }
-.tbltozza{margin-top: 30px;}
+.tbltozzaת .tblnetunylakuach{margin-top: 10px;}
 
-
-
-
+.tdemza{width: 175px;}
+.thbold{text-align: right; padding-right: 5px;}
 
 
 
