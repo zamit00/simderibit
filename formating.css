@@ -47,7 +47,7 @@ table{
   input,select{width: 65px;height: 25px;
     text-align: center;font-size: 20px;}
     .tozaakot{font-size: 20px;color: green;font-weight: bold;margin: 35px 0px 20px 0px;}
-.imagereka{width: 600px;height: auto;}
+
 }
 
 @media (min-width: 767px){
@@ -102,7 +102,7 @@ table{
   input,select{width: 80px;height: 30px;
   text-align: center;font-size: 25px;}
   .tozaakot{font-size: 30px;color: green;font-weight: bold;margin: 35px 0px 20px 0px;}
-.imagereka{width: 700px;height: auto;}
+
 }
 .tbltozza{margin-top: 30px;
          border:none;}
