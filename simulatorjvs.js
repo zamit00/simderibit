@@ -95,7 +95,6 @@ function beforesumsum(){
         document.getElementById('tbltozza').rows[2].cells[2].innerText='';
         document.getElementById('tbltozza').rows[3].cells[2].innerText='';
         document.getElementById('tbltozza').rows[4].cells[2].innerText='';
-        document.getElementById('tblnetunylakuach').style.display= 'none';
         document.getElementById('tozaakot').style.display= 'none';
         document.getElementById('tbltozza').style.display= 'none';
         return;
