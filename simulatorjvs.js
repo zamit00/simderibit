@@ -185,10 +185,13 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     
     if(tkofabeshanim<10){
     document.getElementById('tbltozza').rows[2].cells[0].innerText='תקופה של 10 שנים'
+    document.querySelector("#tbltozza tr:nth-child(3)").display='block';
+
      sum1 = hishuv(x1,x2,ribitOzar,10);
      document.getElementById('tbltozza').rows[2].cells[1].innerText=parseInt(sum1).toLocaleString();
     
     if(colu===1){
+    
      sum2=hishuv(x1,x2,0.06-dn/100,10);}
      else if(colu===2){
         sum2=hishuv(x1,x2,0.05-dn/100,10);}
@@ -200,12 +203,15 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     }
     else{
         document.getElementById('tbltozza').rows[2].cells[0].innerText='';
+        document.querySelector("#tbltozza tr:nth-child(3)").style.display='none';
+        
 
     }
 
 
     if(tkofabeshanim<20){
-    document.getElementById('tbltozza').rows[3].cells[0].innerText='תקופה של 20 שנים'
+    document.getElementById('tbltozza').rows[3].cells[0].innerText='תקופה של 20 שנים';
+    document.querySelector("#tbltozza tr:nth-child(4)").display='block';
     sum1 = hishuv(x1,x2,ribitOzar,20);
     document.getElementById('tbltozza').rows[3].cells[1].innerText=parseInt(sum1).toLocaleString();
    
@@ -220,7 +226,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     }
     else{
         document.getElementById('tbltozza').rows[3].cells[0].innerText='';
-
+        document.querySelector("#tbltozza tr:nth-child(4)").style.display='none';
     }
     
     
@@ -237,25 +243,32 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
            sum2=hishuv(x1,x2,0.04-dn/100,30);
         }
     document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2).toLocaleString();    
-   
+    document.getElementById('hadpeami').innerText= '';
+    document.getElementById('hodshi').innerText='';
+    document.getElementById('shanim').innerText= '';
+    document.getElementById('dmein').innerText= '';
+    document.getElementById('sikons').innerText='';
+    document.getElementById('tvachsikon').innerText='';
+
     if(x1===0) {
-        document.getElementById('tblnetunylakuach').rows[0].cells[1].innerText='ללא';
+        
+        document.getElementById('hadpeami').innerText= ' ללא';
     }
     else{
-        document.getElementById('tblnetunylakuach').rows[0].cells[1].innerText=x1.toLocaleString();  
+        document.getElementById('hadpeami').innerText= " " + parseInt(x1).toLocaleString() + " שח";
     } 
     if(x2===0) {
-        document.getElementById('tblnetunylakuach').rows[0].cells[3].innerText='ללא';
+        document.getElementById('hodshi').innerText=document.getElementById('hodshi').innerText + ' ללא';
     }
     else{
-        document.getElementById('tblnetunylakuach').rows[0].cells[3].innerText=x2.toLocaleString();  
+        document.getElementById('hodshi').innerText=document.getElementById('hodshi').innerText + " " + parseInt(x2).toLocaleString() + " שח";
     }  
     
-    document.getElementById('tblnetunylakuach').rows[1].cells[1].innerText=tkofabeshanim;
-    document.getElementById('tblnetunylakuach').rows[1].cells[3].innerText=dn+'%';
-    document.getElementById('tblnetunylakuach').rows[2].cells[3].innerText=document.getElementById('choosesikon').rows[rowIndex].cells[0].innerText
-    document.getElementById('tblnetunylakuach').rows[2].cells[1].innerText=document.getElementById('choosesikon').rows[0].cells[colu].innerText
-    document.getElementById('tblnetunylakuach').style.display= 'block';
+    document.getElementById('shanim').innerText= document.getElementById('shanim').innerText + " " + tkofabeshanim + " שנים";
+    document.getElementById('dmein').innerText= document.getElementById('dmein').innerText + " " +dn+'%'+ " שנתי";
+    document.getElementById('sikons').innerText=document.getElementById('sikons').innerText + " " + document.getElementById('choosesikon').rows[rowIndex].cells[0].innerText;
+    document.getElementById('tvachsikon').innerText=  document.getElementById('tvachsikon').innerText + " " + document.getElementById('choosesikon').rows[0].cells[colu].innerText;
+    document.getElementById('netunylakuach').style.display= 'flex';
     document.getElementById('tozaakot').style.display= 'block';
     document.getElementById('tbltozza').style.display= 'block';
 
