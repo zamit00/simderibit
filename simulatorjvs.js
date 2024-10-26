@@ -45,9 +45,16 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
 
 
 //console.log(x1, x2, dn, ribitchoose, ribitOzar);//
-if (document.getElementById("rd1").checked){x1=x1;x2=x2;}
-else if (document.getElementById("rd2").checked){x1=x1;x2=0;}
-else{x1=0;x2=x2;}
+if (document.getElementById("rd1").checked){
+    x1 = parseInt(document.getElementsByName("txt1")[0].value);
+    x2 = parseInt(document.getElementsByName("txt2")[0].value);
+}
+else if (document.getElementById("rd2").checked){
+  x1 = parseInt(document.getElementsByName("txt1")[0].value);  
+    x2=0;}
+else{x1=0;
+ x2 = parseInt(document.getElementsByName("txt2")[0].value); 
+    }
 
 sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex)
 
@@ -63,7 +70,6 @@ sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex)
 function beforsumsum(){
     const cells = document.querySelectorAll('#choosesikon td');
 let greenCellFound = false; // Flag to track if any green cell is found
-alert('1');
 cells.forEach(cell => {
     if (cell.style.backgroundColor === 'green') {
         ribitchoose = cell.getAttribute("data-value");
@@ -113,7 +119,7 @@ if (!greenCellFound) {
 }
 else{
     
-alert('2');
+
 
     //if(isNaN(ribitchoose)){alert("");return;}//
     let x1 = parseInt(document.getElementsByName("txt1")[0].value);
@@ -133,13 +139,20 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
 }
 
     
-    alert('3');
+    
    
     let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
     let ribitOzar = 0.04;
-    if (document.getElementById("rd1").checked){x1=x1;x2=x2;}
-    else if (document.getElementById("rd2").checked){x1=x1;x2=0;}
-    else{x1=0;x2=x2;}
+    if (document.getElementById("rd1").checked){
+        x1 = parseInt(document.getElementsByName("txt1")[0].value);
+        x2 = parseInt(document.getElementsByName("txt2")[0].value);
+    }
+    else if (document.getElementById("rd2").checked){
+     x1 = parseInt(document.getElementsByName("txt1")[0].value);   
+        x2=0;}
+    else{x1=0;
+     x2 = parseInt(document.getElementsByName("txt2")[0].value);   
+        }
     alert(x1,x2);
     sumsum(x1, x2, dn, ribitchoose, ribitOzar,columnIndex);
 
