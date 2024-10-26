@@ -13,6 +13,12 @@
   background-color: gold;
   color: black;
 }
+ .tblkot{
+  background-color: black;
+  color: green;
+  font-weight: bold;
+ margin: 5px 10px;
+ }
 body {
 
   display: flex;
@@ -64,6 +70,7 @@ table{
   background-color: black;
   color: green;
   font-weight: bold;
+ margin: 5px 10px;
 }
 th{
   border:1px solid black;
