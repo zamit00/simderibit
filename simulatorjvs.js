@@ -140,7 +140,7 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
     if (document.getElementById("rd1").checked){x1=x1;x2=x2;}
     else if (document.getElementById("rd2").checked){x1=x1;x2=0;}
     else{x1=0;x2=x2;}
-
+    alert(x1,x2);
     sumsum(x1, x2, dn, ribitchoose, ribitOzar,columnIndex);
 
 
