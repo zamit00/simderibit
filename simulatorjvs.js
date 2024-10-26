@@ -91,6 +91,7 @@ function beforesumsum(){
         document.getElementById('tbltozza').rows[2].cells[2].innerText='';
         document.getElementById('tbltozza').rows[3].cells[2].innerText='';
         document.getElementById('tbltozza').rows[4].cells[2].innerText='';
+        document.getElementById('tblnetunylakuach').style.display= 'none';
         return;
        
     }
@@ -228,7 +229,7 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu,rowIndex){
     document.getElementById('tblnetunylakuach').rows[1].cells[3].innerText=dn+'%';
     document.getElementById('tblnetunylakuach').rows[2].cells[3].innerText=document.getElementById('choosesikon').rows[rowIndex].cells[0].innerText
     document.getElementById('tblnetunylakuach').rows[2].cells[1].innerText=document.getElementById('choosesikon').rows[0].cells[colu].innerText
-
+    document.getElementById('tblnetunylakuach').style.display= 'block';
 
     
 
