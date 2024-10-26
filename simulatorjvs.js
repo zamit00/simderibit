@@ -145,18 +145,21 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
     ribitOzar=(ribitOzar-dn/100);
     ribitchoose=(ribitchoose-dn/100);
     let sum1 = hishuv(x1,x2,ribitOzar,tkofabeshanim);
-    document.getElementById('tbltozza').rows[1].cells[1].innerText=parseInt(sum1);
+    sum1= parseInt(sum1);
+    document.getElementById('tbltozza').rows[1].cells[1].innerText=sum1.toLocalestring();
     console.log(parseInt(sum1));
     let sum2=hishuv(x1,x2,ribitchoose,tkofabeshanim);
-    document.getElementById('tbltozza').rows[1].cells[2].innerText=parseInt(sum2);
-    console.log(parseInt(sum2));
+    sum2= parseInt(sum2);
+    document.getElementById('tbltozza').rows[1].cells[2].innerText=sum2.toLocalestring();
+   console.log(parseInt(sum2));
 
     document.getElementById('tbltozza').rows[1].cells[0].innerText='תקופה של ' + tkofabeshanim + ' שנים';
     
     if(tkofabeshanim<10){
     document.getElementById('tbltozza').rows[2].cells[0].innerText='תקופה של 10 שנים'
      sum1 = hishuv(x1,x2,ribitOzar,10);
-     document.getElementById('tbltozza').rows[2].cells[1].innerText=parseInt(sum1);
+     sum1= parseInt(sum1);
+    document.getElementById('tbltozza').rows[2].cells[1].innerText=sum1.toLocalestring();
     console.log(parseInt(sum1));
     if(colu===1){
      sum2=hishuv(x1,x2,0.06-dn/100,10);}
@@ -166,7 +169,8 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
      else{
         sum2=hishuv(x1,x2,0.03-dn/100,10);
      } 
-     document.getElementById('tbltozza').rows[2].cells[2].innerText=parseInt(sum2); 
+     sum2= parseInt(sum2);
+    document.getElementById('tbltozza').rows[2].cells[2].innerText=sum2.toLocalestring();
     console.log(parseInt(sum2));}
     else{
         document.getElementById('tbltozza').rows[2].cells[0].innerText='';
@@ -177,7 +181,8 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
     if(tkofabeshanim<20){
     document.getElementById('tbltozza').rows[3].cells[0].innerText='תקופה של 20 שנים'
     sum1 = hishuv(x1,x2,ribitOzar,20);
-    document.getElementById('tbltozza').rows[3].cells[1].innerText=parseInt(sum1);
+    sum1= parseInt(sum1);
+    document.getElementById('tbltozza').rows[3].cells[1].innerText=sum1.toLocalestring();
     console.log(parseInt(sum1));
     if(colu===1){
         sum2=hishuv(x1,x2,0.07-dn/100,20);}
@@ -186,8 +191,9 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
         else{
            sum2=hishuv(x1,x2,0.04-dn/100,20);
         }
-    document.getElementById('tbltozza').rows[3].cells[2].innerText=parseInt(sum2);    
-    console.log(parseInt(sum2));}
+    sum2= parseInt(sum2);
+    document.getElementById('tbltozza').rows[3].cells[2].innerText=sum2.toLocalestring();
+  console.log(parseInt(sum2));}
     else{
         document.getElementById('tbltozza').rows[3].cells[0].innerText='';
 
@@ -197,7 +203,9 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
 
     sum1 = hishuv(x1,x2,ribitOzar,30);
     document.getElementById('tbltozza').rows[4].cells[0].innerText='תקופה של 30 שנים'
-    document.getElementById('tbltozza').rows[4].cells[1].innerText=parseInt(sum1);
+    sum1= parseInt(sum1);
+    document.getElementById('tbltozza').rows[4].cells[1].innerText=sum1.toLocalestring();
+
     console.log(parseInt(sum1));
     if(colu===1){
         sum2=hishuv(x1,x2,0.08-dn/100,30);}
@@ -206,8 +214,9 @@ function sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,colu){
         else{
            sum2=hishuv(x1,x2,0.04-dn/100,30);
         }
-    document.getElementById('tbltozza').rows[4].cells[2].innerText=parseInt(sum2);    
-    console.log(parseInt(sum2));
+    sum2= parseInt(sum2);
+    document.getElementById('tbltozza').rows[4].cells[2].innerText=sum2.toLocalestring();
+ console.log(parseInt(sum2));
 
 
 
