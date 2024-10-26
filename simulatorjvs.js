@@ -68,7 +68,7 @@ sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex)
 }
 
 function beforsumsum(){
-    const cells = document.querySelectorAll('#choosesikon td');
+const cells = document.querySelectorAll('#choosesikon td');
 let greenCellFound = false; // Flag to track if any green cell is found
 cells.forEach(cell => {
     if (cell.style.backgroundColor === 'green') {
@@ -76,18 +76,15 @@ cells.forEach(cell => {
         greenCellFound = true; // Set the flag to true if a green cell is found
    
     
-    const rowIndex = cell.parentElement.rowIndex ; // Subtract 1 for the header row
-    const columnIndex = cell.cellIndex; // Subtract 1 for the header column
-    let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
-    if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
-    || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
+        const rowIndex = cell.parentElement.rowIndex ; // Subtract 1 for the header row
+        const columnIndex = cell.cellIndex; // Subtract 1 for the header column
+        let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
+          if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
+              || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
         alert(' בצע בחירה מתאימה בטבלה'); 
         cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
-
-
-        
         document.getElementById('tbltozza').rows[1].cells[0].innerText='';
         document.getElementById('tbltozza').rows[1].cells[1].innerText='';
         document.getElementById('tbltozza').rows[2].cells[0].innerText='';
@@ -119,7 +116,7 @@ if (!greenCellFound) {
 }
 else{
     
-
+alert('ok1');
 
     //if(isNaN(ribitchoose)){alert("");return;}//
     let x1 = parseInt(document.getElementsByName("txt1")[0].value);
@@ -153,6 +150,7 @@ if (isNaN(dn) || dn < 0 || dn > 1) {
     else{x1=0;
      x2 = parseInt(document.getElementsByName("txt2")[0].value);   
         }
+    alert('ok2');
     alert(x1,x2);
     sumsum(x1, x2, dn, ribitchoose, ribitOzar,columnIndex);
 
