@@ -81,12 +81,8 @@ cells.forEach(cell => {
     });
 
 
-        for (let i = 1; i < 5; i++) {
-            document.getElementById('tbltozza').rows[i].cells[0].innerText='';
-            document.getElementById('tbltozza').rows[i].cells[1].innerText='';
-            document.getElementById('tbltozza').rows[i].cells[2].innerText='';
-        }
-       /* document.getElementById('tbltozza').rows[1].cells[0].innerText='';
+        
+        document.getElementById('tbltozza').rows[1].cells[0].innerText='';
         document.getElementById('tbltozza').rows[1].cells[1].innerText='';
         document.getElementById('tbltozza').rows[2].cells[0].innerText='';
         document.getElementById('tbltozza').rows[3].cells[0].innerText='';
@@ -98,7 +94,7 @@ cells.forEach(cell => {
         document.getElementById('tbltozza').rows[2].cells[2].innerText='';
         document.getElementById('tbltozza').rows[3].cells[2].innerText='';
         document.getElementById('tbltozza').rows[4].cells[2].innerText='';
-        */
+    
         return;
        
     }
