@@ -1,6 +1,7 @@
 function highlightCell(cell) {
     // Reset all cells to the original color
     const cells = document.querySelectorAll('#choosesikon td');
+    const tabeletozza=document.getElementById('tbltozza');
     cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
@@ -18,6 +19,25 @@ function highlightCell(cell) {
     || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
         alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); return;
        
+        tabeletozza.rows[1].cells[0].innerText='';
+        tabeletozza.rows[1].cells[1].innerText='';
+        tabeletozza.rows[2 ].cells[1].innerText='';
+        tabeletozza.rows[3].cells[1].innerText='';
+        tabeletozza.rows[4].cells[1].innerText='';
+        tabeletozza.rows[1].cells[2].innerText='';
+        tabeletozza.rows[2].cells[2].innerText='';
+        tabeletozza.rows[3].cells[2].innerText='';
+        tabeletozza.rows[4].cells[2].innerText='';
+        tabeletozza.style.display= 'none';
+        document.getElementById('netunylakuach').style.display= 'none';
+        document.getElementById('hadpeami').innerText= '';
+        document.getElementById('hodshi').innerText='';
+        document.getElementById('shanim').innerText= '';
+        document.getElementById('dmein').innerText= '';
+        document.getElementById('sikons').innerText='';
+        document.getElementById('tvachsikon').innerText='';
+        
+        return;
     }
     
     else{ 
@@ -51,7 +71,8 @@ else{x1=0;x2=x2;}
 
 sumsum(x1, x2, dn, ribitchoose, ribitOzar,tkofabeshanim,columnIndex,rowIndex)
 
-
+tabeletozza.style.display= 'block';
+ document.getElementById('netunylakuach').style.display= 'flex';
 
 
     }
@@ -102,7 +123,7 @@ function beforesumsum(){
         document.getElementById('dmein').innerText= '';
         document.getElementById('sikons').innerText='';
         document.getElementById('tvachsikon').innerText='';
-        alert('ok');
+        document.getElementById('netunylakuach').style.display= 'none';
         return;
        
     }
