@@ -17,7 +17,7 @@ function highlightCell(cell) {
     let tkofabeshanim = parseInt(document.getElementById("selecttkofa").value);
     if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
     || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
-        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); return;
+        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); 
        
         tabeletozza.rows[1].cells[0].innerText='';
         tabeletozza.rows[1].cells[1].innerText='';
