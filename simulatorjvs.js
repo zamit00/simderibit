@@ -87,16 +87,21 @@ function beforesumsum(){
 
         const tabeletozza=document.getElementById('tbltozza');
         tabeletozza.rows[1].cells[0].innerText='';
-        document.getElementById('tbltozza').rows[1].cells[1].innerText='';
-        document.getElementById('tbltozza').rows[2 ].cells[1].innerText='';
-        document.getElementById('tbltozza').rows[3].cells[1].innerText='';
-        document.getElementById('tbltozza').rows[4].cells[1].innerText='';
-        document.getElementById('tbltozza').rows[1].cells[2].innerText='';
-        document.getElementById('tbltozza').rows[2].cells[2].innerText='';
-        document.getElementById('tbltozza').rows[3].cells[2].innerText='';
-        document.getElementById('tbltozza').rows[4].cells[2].innerText='';
-        document.getElementById('tozaakot').style.display= 'none';
-        document.getElementById('tbltozza').style.display= 'none';
+        tabeletozza.rows[1].cells[1].innerText='';
+        tabeletozza.rows[2 ].cells[1].innerText='';
+        tabeletozza.rows[3].cells[1].innerText='';
+        tabeletozza.rows[4].cells[1].innerText='';
+        tabeletozza.rows[1].cells[2].innerText='';
+        tabeletozza.rows[2].cells[2].innerText='';
+        tabeletozza.rows[3].cells[2].innerText='';
+        tabeletozza.rows[4].cells[2].innerText='';
+        tabeletozza.style.display= 'none';
+        document.getElementById('hadpeami').innerText= '';
+        document.getElementById('hodshi').innerText='';
+        document.getElementById('shanim').innerText= '';
+        document.getElementById('dmein').innerText= '';
+        document.getElementById('sikons').innerText='';
+        document.getElementById('tvachsikon').innerText='';
         alert('ok');
         return;
        
