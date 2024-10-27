@@ -103,6 +103,8 @@ const tabeletozza=document.getElementById('tbltozza');
     if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
     || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
         alert('התאם לבחירה בטבלה'); 
+        tabeletozza.style.display= 'none';
+        document.getElementById('netunylakuach').style.display= 'none';
         cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
@@ -117,7 +119,7 @@ const tabeletozza=document.getElementById('tbltozza');
         tabeletozza.rows[2].cells[2].innerText='';
         tabeletozza.rows[3].cells[2].innerText='';
         tabeletozza.rows[4].cells[2].innerText='';
-        tabeletozza.style.display= 'none';
+        
         document.getElementById('tozaakot').style.display= 'none';
         document.getElementById('hadpeami').innerText= '';
         document.getElementById('hodshi').innerText='';
@@ -125,8 +127,7 @@ const tabeletozza=document.getElementById('tbltozza');
         document.getElementById('dmein').innerText= '';
         document.getElementById('sikons').innerText='';
         document.getElementById('tvachsikon').innerText='';
-        document.getElementById('netunylakuach').style.display= 'none';
-        return;
+           return;
        
     }
     
