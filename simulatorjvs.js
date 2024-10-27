@@ -29,6 +29,7 @@ function highlightCell(cell) {
         tabeletozza.rows[3].cells[2].innerText='';
         tabeletozza.rows[4].cells[2].innerText='';
         tabeletozza.style.display= 'none';
+        document.getElementById('tozaakot').style.display= 'none';
         document.getElementById('netunylakuach').style.display= 'none';
         document.getElementById('hadpeami').innerText= '';
         document.getElementById('hodshi').innerText='';
@@ -117,6 +118,7 @@ const tabeletozza=document.getElementById('tbltozza');
         tabeletozza.rows[3].cells[2].innerText='';
         tabeletozza.rows[4].cells[2].innerText='';
         tabeletozza.style.display= 'none';
+        document.getElementById('tozaakot').style.display= 'none';
         document.getElementById('hadpeami').innerText= '';
         document.getElementById('hodshi').innerText='';
         document.getElementById('shanim').innerText= '';
