@@ -85,8 +85,8 @@ function beforesumsum(){
         cell.style.backgroundColor = 'black';
     });
 
-        
-        document.getElementById('tbltozza').rows[1].cells[0].innerText='';
+        const tabeletozza=document.getElementById('tbltozza');
+        tabeletozza.rows[1].cells[0].innerText='';
         document.getElementById('tbltozza').rows[1].cells[1].innerText='';
         document.getElementById('tbltozza').rows[2 ].cells[1].innerText='';
         document.getElementById('tbltozza').rows[3].cells[1].innerText='';
@@ -97,6 +97,7 @@ function beforesumsum(){
         document.getElementById('tbltozza').rows[4].cells[2].innerText='';
         document.getElementById('tozaakot').style.display= 'none';
         document.getElementById('tbltozza').style.display= 'none';
+        alert('ok');
         return;
        
     }
