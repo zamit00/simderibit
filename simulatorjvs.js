@@ -86,7 +86,7 @@ function beforesumsum(){
     let rowIndex;
     const cells = document.querySelectorAll('#choosesikon td');
     let greenCellFound = false; // Flag to track if any green cell is found
-
+const tabeletozza=document.getElementById('tbltozza');
    
     
     cells.forEach(cell => {
@@ -101,12 +101,12 @@ function beforesumsum(){
 
     if((rowIndex===1 && tkofabeshanim>5) || (rowIndex===2 && (tkofabeshanim<=5 || tkofabeshanim>10))
     || (rowIndex===3 && (tkofabeshanim<=10 || tkofabeshanim>20)) || (rowIndex===4 && tkofabeshanim<=20)){ 
-        alert('התקופה שנבחרה אינה תואמת לבחירה בטבלה'); 
+        alert('התאם לבחירה בטבלה'); 
         cells.forEach(cell => {
         cell.style.backgroundColor = 'black';
     });
 
-        const tabeletozza=document.getElementById('tbltozza');
+        
         tabeletozza.rows[1].cells[0].innerText='';
         tabeletozza.rows[1].cells[1].innerText='';
         tabeletozza.rows[2 ].cells[1].innerText='';
@@ -138,6 +138,21 @@ function beforesumsum(){
 
 // Show alert if no green cell was found
 if (!greenCellFound) {
+    tabeletozza.rows[2 ].cells[1].innerText='';
+        tabeletozza.rows[3].cells[1].innerText='';
+        tabeletozza.rows[4].cells[1].innerText='';
+        tabeletozza.rows[1].cells[2].innerText='';
+        tabeletozza.rows[2].cells[2].innerText='';
+        tabeletozza.rows[3].cells[2].innerText='';
+        tabeletozza.rows[4].cells[2].innerText='';
+        tabeletozza.style.display= 'none';
+        document.getElementById('hadpeami').innerText= '';
+        document.getElementById('hodshi').innerText='';
+        document.getElementById('shanim').innerText= '';
+        document.getElementById('dmein').innerText= '';
+        document.getElementById('sikons').innerText='';
+        document.getElementById('tvachsikon').innerText='';
+        document.getElementById('netunylakuach').style.display= 'none';
     return;
 }
 else{
